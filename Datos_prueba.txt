@@ -1,0 +1,10 @@
+#Trabajo de la IA para ingresar datos a una base.
+
+INSERT INTO empleados (nombre, apellido, puesto, salario, fecha_contratacion)
+VALUES
+('Juan', 'Pérez', 'Desarrollador', 3000.00, '2024-01-15'),
+('María', 'Gómez', 'Analista', 2800.00, '2024-02-01'),
+('Carlos', 'López', 'Gerente', 4500.00, '2023-11-10'),
+('Ana', 'Martínez', 'Diseñador', 2600.00, '2024-03-22'),
+('Luis', 'Fernández', 'Soporte Técnico', 2200.00, '2024-04-05');
+================================================================================================
