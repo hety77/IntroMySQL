@@ -8,12 +8,16 @@ VALUES
 ('Ana', 'Martínez', 'Diseñador', 2600.00, '2024-03-22'),
 ('Luis', 'Fernández', 'Soporte Técnico', 2200.00, '2024-04-05');
 ================================================================================================
-INSERT INTO usuarios (nombre, email, telefono, fecha_registro) VALUES
-('Martín González', 'martin.gonzalez@gmail.com', '+54 9 11 2345-6789', '2024-01-15'),
-('Lucía Fernández', 'lucia.fernandez@outlook.com', '+54 9 11 3456-7890', '2024-02-10'),
-('Santiago Pérez', 'santiago.perez@gmail.com', '+54 9 11 4567-8901', '2024-03-05'),
-('Valentina López', 'valentina.lopez@outlook.com', '+54 9 11 5678-9012', '2024-03-22'),
-('Agustina Romero', 'agustina.romero@gmail.com', '+54 9 11 6789-0123', '2024-04-18'),
-('Joaquín Torres', 'joaquin.torres@outlook.com', '+54 9 11 7890-1234', '2024-05-09'),
-('Camila Sosa', 'camila.sosa@gmail.com', '+54 9 11 8901-2345', '2024-05-27'),
-('Mateo Díaz', 'mateo.diaz@outlook.com', '+54 9 11 9012-3456', '2024-06-02');
+INSERT INTO prestamos (libro_id, usuario_id, fecha_prestamo, fecha_devolucion, devuelto) VALUES
+(1, 1, '2024-09-01', '2024-09-10', true),
+(2, 2, '2024-08-15', '2024-08-25', true),
+(3, 3, '2024-07-20', '2024-08-05', true),
+(4, 1, '2024-06-10', '2024-06-20', true),
+(5, 2, '2024-05-05', '2024-05-15', true),
+(1, 3, '2024-10-01', NULL, false),
+(2, 1, '2024-10-05', NULL, false),
+(3, 2, '2024-10-10', NULL, false),
+(4, 3, '2024-09-25', '2024-10-05', true),
+(5, 1, '2024-10-12', NULL, false),
+(2, 3, '2024-09-18', '2024-10-02', true),
+(1, 2, '2024-10-14', NULL, false);
