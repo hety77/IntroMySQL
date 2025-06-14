@@ -1,24 +1,9 @@
-CREATE DATABASE tienda_evolucion;
-USE tienda_evolucion;
+-- El negocio crece y necesita más información de productos
+ALTER TABLE productos ADD COLUMN categoria VARCHAR(50) NULL;
+ALTER TABLE productos ADD COLUMN stock INT DEFAULT 0;
+ALTER TABLE productos ADD COLUMN descripcion TEXT NULL;
 
-CREATE TABLE productos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    precio DECIMAL(10,2) NOT NULL
-);
-
-CREATE TABLE clientes (
-    dni VARCHAR(8) PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL,
-    telefono VARCHAR(15)
-);
-
--- Insertar datos iniciales
-INSERT INTO productos (nombre, precio) VALUES 
-('Notebook', 75000.00),
-('Mouse', 2500.00),
-('Teclado', 4500.00);
-
-INSERT INTO clientes VALUES 
-('12345678', 'Juan Pérez', '1123456789'),
-('87654321', 'María González', '1198765432');
+-- Actualizar productos existentes
+UPDATE productos SET categoria = 'Electrónicos', stock = 10 WHERE id = 1;
+UPDATE productos SET categoria = 'Accesorios', stock = 50 WHERE id = 2;
+UPDATE productos SET categoria = 'Accesorios', stock = 30 WHERE id = 3;
